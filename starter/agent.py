@@ -58,8 +58,7 @@ def run_agent(question: str):
     while True:
         # TODO 2. REASON -- call call_model(messages) to get the model's reply,
         # then append that reply onto `messages` (so it remembers what it said).
-        reply = call_model(messages)
-        messages.append(reply)
+        
 
         # TODO 3. DECIDE -- check reply.get("tool_calls", [None])[0].
         # If it's None: the model is done. print [DECIDE] and return reply["content"].
