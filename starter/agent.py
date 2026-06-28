@@ -53,7 +53,7 @@ def call_model(messages):
 def run_agent(question: str):
     # 1. PERCEIVE -- the conversation list IS the agent's memory of what's happened.
     messages = [{"role": "user", "content": question}]
-    print(f"\n[PERCEIVE] {question}")
+    print(f"\nStep 1 - Perceive: {question}")
 
     while True:
         # TODO 2. REASON -- call call_model(messages) to get the model's reply,
@@ -63,14 +63,17 @@ def run_agent(question: str):
         # TODO 3. DECIDE -- check reply.get("tool_calls", [None])[0].
         # If it's None: the model is done. print [DECIDE] and return reply["content"].
         # If it's NOT None: print which tool it wants to call, and keep going.
+        
+
 
         # TODO 4. ACT -- pull `args = tool_call["function"]["arguments"]`,
         # then call get_exchange_rate(**args) to get a real result. Print it.
+        
 
         # TODO 5. REFLECT -- append the result back onto `messages` as
         # {"role": "tool", "content": json.dumps(result)} so the model
         # "perceives" it the next time through this loop.
-
+        
         break  # <-- delete this line once your loop above actually loops
 
 
